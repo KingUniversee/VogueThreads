@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="10" fill="#0F172A" />
+  <!-- T Crossbar -->
+  <rect x="9" y="9" width="30" height="5" rx="1" fill="#FFFFFF" />
+  <!-- T Pillar -->
+  <rect x="21.5" y="14" width="5" height="18.5" rx="0.75" fill="#FFFFFF" />
+  <!-- V Chevron -->
+  <path d="M9 16H14L24 35.5L34 16H39L24 41Z" fill="#FFFFFF" />
+</svg>

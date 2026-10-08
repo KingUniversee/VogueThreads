@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 98%;
+    --foreground: 0 0% 4%;
+  }
+
+  * {
+    border-color: #EDEDF0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: #E8E4DC;
+    color: #0B0B0B;
+    font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Custom Sleek Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D1D1D6;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8E8E93;
+  }
+}
+
+@layer components {
+  /* DARK LIQUID GLASS (Navigation, Hero Tags, Mobile Dock) */
+  .glass-dark {
+    background: rgba(11, 11, 11, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .glass-dark-card {
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 16px 40px -8px rgba(0, 0, 0, 0.5);
+  }
+
+  /* LIGHT LIQUID GLASS (Content overlays, pills, modals) */
+  .glass-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  /* AUTHENTIC LIQUID GLASS CARD (Ultra-translucent, refractive glass with specular gleam) */
+  .liquid-glass-card {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.70) 0%,
+      rgba(255, 255, 255, 0.32) 50%,
+      rgba(255, 255, 255, 0.55) 100%
+    ) !important;
+    backdrop-filter: blur(28px) saturate(190%) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
+    box-shadow:
+      inset 0 1px 2px 0 rgba(255, 255, 255, 1),
+      inset 0 -1px 1px 0 rgba(255, 255, 255, 0.3),
+      0 14px 36px -4px rgba(0, 0, 0, 0.08),
+      0 4px 12px -2px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+
+  .liquid-glass-card:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(255, 255, 255, 0.45) 50%,
+      rgba(255, 255, 255, 0.70) 100%
+    ) !important;
+    border-color: rgba(255, 255, 255, 1) !important;
+    box-shadow:
+      inset 0 1px 3px 0 rgba(255, 255, 255, 1),
+      0 24px 50px -10px rgba(0, 0, 0, 0.14),
+      0 8px 20px -4px rgba(0, 0, 0, 0.06) !important;
+    transform: translateY(-6px) scale(1.01) !important;
+  }
+
+  .liquid-glass-details {
+    background: rgba(255, 255, 255, 0.22) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.45) !important;
+    transition: background 0.3s ease;
+  }
+
+  .liquid-glass-card:hover .liquid-glass-details {
+    background: rgba(255, 255, 255, 0.38) !important;
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(237, 237, 240, 0.8);
+    box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.04);
+  }
+
+  .glass-input {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #E2E2E6;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-input:focus {
+    background: #FFFFFF;
+    border-color: #0B0B0B;
+    box-shadow: 0 0 0 2px rgba(11, 11, 11, 0.1);
+  }
+
+  /* HERO GLASS SLAB (Matches curved hero card in mockup) */
+  .hero-glass-slab {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+
+  /* ACCESSIBLE FOCUS RING */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-vt-black focus-visible:ring-offset-2;
+  }
+}
+
+/* REDUCED MOTION OVERRIDE */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
